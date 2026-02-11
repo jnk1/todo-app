@@ -1,0 +1,17 @@
+.todo-list {
+  margin-bottom: 2rem;
+}
+
+.todo-list-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-list-empty p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin: 0;
+}
