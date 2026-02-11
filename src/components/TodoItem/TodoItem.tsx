@@ -34,6 +34,7 @@ export const TodoItem = ({
     return (
       <div className="todo-item editing">
         <TodoForm
+          key={todo.id}
           onSubmit={handleEdit}
           initialData={{
             title: todo.title,

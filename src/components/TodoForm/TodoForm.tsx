@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import type { FormEvent } from 'react';
 import type { Priority } from '../../types/todo';
 import { getToday } from '../../utils/dateHelpers';
@@ -18,14 +18,6 @@ export const TodoForm = ({ onSubmit, initialData, isEditing = false }: TodoFormP
   const [title, setTitle] = useState(initialData?.title || '');
   const [priority, setPriority] = useState<Priority>(initialData?.priority || 'medium');
   const [dueDate, setDueDate] = useState(initialData?.dueDate || '');
-
-  useEffect(() => {
-    if (initialData) {
-      setTitle(initialData.title);
-      setPriority(initialData.priority);
-      setDueDate(initialData.dueDate || '');
-    }
-  }, [initialData]);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
