@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { FormEvent } from 'react';
+import type React from 'react';
 import type { Priority } from '../../types/todo';
 import { getToday } from '../../utils/dateHelpers';
 import './TodoForm.css';
@@ -19,7 +19,7 @@ export const TodoForm = ({ onSubmit, initialData, isEditing = false }: TodoFormP
   const [priority, setPriority] = useState<Priority>(initialData?.priority || 'medium');
   const [dueDate, setDueDate] = useState(initialData?.dueDate || '');
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit: React.SubmitEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     if (!title.trim()) return;
 
