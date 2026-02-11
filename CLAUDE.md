@@ -6,6 +6,38 @@
 
 **ユーザーとのやりとりは原則として日本語で行うこと。**コード、コメント、コミットメッセージは英語で記述しますが、説明や質問への回答は日本語で返してください。
 
+## Commitメッセージルール (Conventional Commits)
+
+コミットメッセージは **Conventional Commits** を参考にして記述する。
+
+基本フォーマット:
+
+```txt
+<type>(<scope>): <subject>
+```
+
+- type: feat | fix | docs | style | refactor | perf | test | build | ci | chore | revert
+- scope: 変更対象（任意。例: api, web, auth, deps）
+- subject: 命令形・短く（例: "add", "fix", "update" など）。末尾にピリオドは付けない。
+
+例:
+
+- feat(auth): add OAuth login
+- fix(api): handle empty payload
+- refactor(web): simplify state management
+- docs: update setup instructions
+- chore(deps): bump requests to 2.x
+
+破壊的変更（Breaking change）がある場合:
+
+- feat!: drop legacy endpoint
+- refactor(api)!: rename userId to user_id
+（必要に応じて本文に BREAKING CHANGE: を書く）
+
+補足:
+
+- 挙動が変わる変更は refactor ではなく feat/fix とする（外から見える価値で分類する）
+
 ## プロジェクト概要
 
 優先度管理、期限設定、フィルタリング、localStorage永続化機能を持つReact TODOアプリケーション。React 18、TypeScript、Viteで構築されています。
