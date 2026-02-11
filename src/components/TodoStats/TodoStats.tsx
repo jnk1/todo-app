@@ -1,4 +1,4 @@
-import { Todo } from '../../types/todo';
+import type { Todo } from '../../types/todo';
 import { isOverdueTodo } from '../../utils/todoHelpers';
 import './TodoStats.css';
 

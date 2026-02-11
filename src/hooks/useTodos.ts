@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import { Todo, Priority, FilterType } from '../types/todo';
+import type { Todo, Priority, FilterType } from '../types/todo';
 import { useLocalStorage } from './useLocalStorage';
 import { filterTodos, sortTodosByPriority } from '../utils/todoHelpers';
 

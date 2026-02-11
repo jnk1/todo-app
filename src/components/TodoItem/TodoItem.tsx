@@ -1,4 +1,4 @@
-import { Todo, Priority } from '../../types/todo';
+import type { Todo, Priority } from '../../types/todo';
 import { formatDate } from '../../utils/dateHelpers';
 import { isOverdueTodo } from '../../utils/todoHelpers';
 import { TodoForm } from '../TodoForm/TodoForm';

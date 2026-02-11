@@ -1,4 +1,4 @@
-import { Todo, FilterType, Priority } from '../types/todo';
+import type { Todo, FilterType, Priority } from '../types/todo';
 import { isOverdue } from './dateHelpers';
 
 export const filterTodos = (todos: Todo[], filter: FilterType): Todo[] => {

@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { FilterType, Priority } from './types/todo';
+import type { FilterType, Priority } from './types/todo';
 import { useTodos } from './hooks/useTodos';
 import { TodoForm } from './components/TodoForm/TodoForm';
 import { TodoList } from './components/TodoList/TodoList';

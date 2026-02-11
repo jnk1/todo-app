@@ -1,4 +1,4 @@
-import { FilterType } from '../../types/todo';
+import type { FilterType } from '../../types/todo';
 import './TodoFilter.css';
 
 interface TodoFilterProps {

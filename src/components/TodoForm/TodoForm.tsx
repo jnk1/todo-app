@@ -1,5 +1,5 @@
 import { useState, useEffect, FormEvent } from 'react';
-import { Priority } from '../../types/todo';
+import type { Priority } from '../../types/todo';
 import { getToday } from '../../utils/dateHelpers';
 import './TodoForm.css';
 
