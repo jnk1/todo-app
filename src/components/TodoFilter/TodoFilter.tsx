@@ -18,21 +18,21 @@ export const TodoFilter = ({ currentFilter, onFilterChange, counts }: TodoFilter
         className={`filter-btn ${currentFilter === 'all' ? 'active' : ''}`}
         onClick={() => onFilterChange('all')}
       >
-        All
+        すべて
         <span className="count-badge">{counts.all}</span>
       </button>
       <button
         className={`filter-btn ${currentFilter === 'active' ? 'active' : ''}`}
         onClick={() => onFilterChange('active')}
       >
-        Active
+        未完了
         <span className="count-badge">{counts.active}</span>
       </button>
       <button
         className={`filter-btn ${currentFilter === 'completed' ? 'active' : ''}`}
         onClick={() => onFilterChange('completed')}
       >
-        Completed
+        完了済み
         <span className="count-badge">{counts.completed}</span>
       </button>
     </div>

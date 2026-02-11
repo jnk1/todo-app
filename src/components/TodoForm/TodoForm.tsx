@@ -45,7 +45,7 @@ export const TodoForm = ({ onSubmit, initialData, isEditing = false }: TodoFormP
         <input
           type="text"
           className="todo-input"
-          placeholder="What needs to be done?"
+          placeholder="何をしますか？"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
@@ -53,19 +53,19 @@ export const TodoForm = ({ onSubmit, initialData, isEditing = false }: TodoFormP
       </div>
       <div className="form-row">
         <div className="form-group">
-          <label htmlFor="priority">Priority:</label>
+          <label htmlFor="priority">優先度：</label>
           <select
             id="priority"
             value={priority}
             onChange={(e) => setPriority(e.target.value as Priority)}
           >
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
+            <option value="low">低</option>
+            <option value="medium">中</option>
+            <option value="high">高</option>
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="dueDate">Due Date:</label>
+          <label htmlFor="dueDate">期限：</label>
           <input
             id="dueDate"
             type="date"
@@ -75,7 +75,7 @@ export const TodoForm = ({ onSubmit, initialData, isEditing = false }: TodoFormP
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          {isEditing ? 'Update' : 'Add'}
+          {isEditing ? '更新' : '追加'}
         </button>
       </div>
     </form>

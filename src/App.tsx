@@ -36,8 +36,8 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>📝 Todo App</h1>
-        <p className="app-subtitle">Organize your tasks efficiently</p>
+        <h1>📝 TODOアプリ</h1>
+        <p className="app-subtitle">タスクを効率的に管理</p>
       </header>
 
       <main className="app-main">
@@ -63,7 +63,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>Built with React + TypeScript + Vite</p>
+        <p>React + TypeScript + Vite で構築</p>
       </footer>
     </div>
   );

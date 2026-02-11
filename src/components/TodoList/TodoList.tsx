@@ -24,7 +24,7 @@ export const TodoList = ({
   if (todos.length === 0) {
     return (
       <div className="todo-list-empty">
-        <p>No todos yet. Add one to get started!</p>
+        <p>まだTODOがありません。追加して始めましょう！</p>
       </div>
     );
   }

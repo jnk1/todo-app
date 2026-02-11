@@ -18,20 +18,20 @@ export const TodoStats = ({ todos }: TodoStatsProps) => {
       <div className="stats-grid">
         <div className="stat-item">
           <span className="stat-value">{total}</span>
-          <span className="stat-label">Total</span>
+          <span className="stat-label">合計</span>
         </div>
         <div className="stat-item">
           <span className="stat-value">{active}</span>
-          <span className="stat-label">Active</span>
+          <span className="stat-label">未完了</span>
         </div>
         <div className="stat-item">
           <span className="stat-value">{completed}</span>
-          <span className="stat-label">Completed</span>
+          <span className="stat-label">完了</span>
         </div>
         {overdue > 0 && (
           <div className="stat-item overdue">
             <span className="stat-value">{overdue}</span>
-            <span className="stat-label">Overdue</span>
+            <span className="stat-label">期限切れ</span>
           </div>
         )}
       </div>
@@ -43,7 +43,7 @@ export const TodoStats = ({ todos }: TodoStatsProps) => {
               style={{ width: `${completionRate}%` }}
             />
           </div>
-          <span className="progress-text">{completionRate}% Complete</span>
+          <span className="progress-text">{completionRate}% 完了</span>
         </div>
       )}
     </div>

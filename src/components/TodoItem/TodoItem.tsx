@@ -43,7 +43,7 @@ export const TodoItem = ({
           isEditing
         />
         <button className="btn btn-cancel" onClick={onEditEnd}>
-          Cancel
+          キャンセル
         </button>
       </div>
     );
@@ -61,7 +61,7 @@ export const TodoItem = ({
         <span className="todo-title">{todo.title}</span>
         <div className="todo-meta">
           <span className={`priority-badge priority-${todo.priority}`}>
-            {todo.priority}
+            {todo.priority === 'high' ? '高' : todo.priority === 'medium' ? '中' : '低'}
           </span>
           {todo.dueDate && (
             <span className="due-date">
@@ -76,13 +76,13 @@ export const TodoItem = ({
           onClick={() => onEditStart(todo.id)}
           disabled={todo.completed}
         >
-          Edit
+          編集
         </button>
         <button
           className="btn btn-delete"
           onClick={() => onDelete(todo.id)}
         >
-          Delete
+          削除
         </button>
       </div>
     </div>
